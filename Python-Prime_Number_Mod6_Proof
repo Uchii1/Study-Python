@@ -1,0 +1,19 @@
+#A Programme to prove that all prime numbers over 3 are either 1 or 5 mod 6
+print("A Programme to prove that all prime numbers over 3 are either 1 or 5 mod 6")
+#Defining a function to find prime numbers
+def is_it_prime(n):
+    if n < 2:
+        return False
+# this checks for functions of n, looking through all numbers from 2 to the square root of n
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False    
+    else :
+         return True
+#Loop to print the prime numbers between 4 and 100, and their mod 6 value
+for n in range(4, 100):
+    if is_it_prime(n) == True:
+        m = n % 6
+        print(n, "in mod 6 is ", m)
+    
+print("There you go! That's the proof!")
